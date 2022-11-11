@@ -3,11 +3,26 @@ spring:
     console:
       path: /h2-console
       enabled: true
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
   datasource:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:file:~/test
     username: sa
     password:
+
+  thymeleaf:
+    #prefix: // resources/templates가 default 경로
+    suffix: .html
+    cache: false
+
 logging:
   level:
     org:
